@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    box-sizing: border-box;
+  }
+  html {
+    background: #000;
+    color: #555;
+  }
+  body {
+    background: #333;
+    font: Roboto, FontAwesome, sans-serif;
+  }
+  main {
+    margin: 3em;
+  }
+  
+  section {
+    margin-bottom: 100px;
+  }
+  
+  h1 {
+    font-size: 2rem;
+    font-family: Roboto, FontAwesome, sans-serif;
+    font-weight: 500;
+    line-height: 1.6;
+    color: #fff;
+    margin: 20px 0 10px 0;
+  }
+  
+  a {
+    color: #4183c4;
+    text-decoration: none;
+  }
+  
+  p {
+    font-size: 1.2rem;
+    font-family: Roboto, FontAwesome, sans-serif;
+    line-height: 1.5;
+    color: #fff;
+    
+  }
+  
+  p:last-of-type {
+    margin-bottom: 20px;
+  }
+  
+  li {
+    font-size: 1.4rem;
+  }
+  
+  .burger {
+    display: block;
+    list-style-type: none;
+    background: #000;
+  }
+  .burger ul {
+    text-align: center;
+  }
+  .burger li {
+    display: inline-block;
+    width: 15%;
+    list-style: none;
+    background: #000;
+    color: #fff;
+  }
+  .burger li a {
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+    color: #fff;
+    transition: 0.8s;
+  }
+  .burger li a:hover {
+    background: #4183c4;
+    color: #fff;
+  }
+  .burger label {
+    display: none;
+  }
+  #menu-toggle {
+    display: none;
+  }
+  
+  @media all and (max-width: 700px) and (min-width: 0px) {
+    .burger label {
+      display: block;
+      height: 70px;
+      width: 70px;
+      line-height: 70px;
+      text-align: center;
+      color: #fff;
+      font-size: 1.8rem;
+      background: #000;
+      cursor: pointer;
+    }
+    .burger .nav {
+      display: none;
+    }
+    .burger li {
+      width: 100%;
+    }
+    #menu-toggle:checked + .nav {
+      display: block;
+    }
+    .burger label:active .nav {
+      display: none;
+    }
+  }
+  
