@@ -54,8 +54,8 @@ Temporary Items
 .ionide
 
 ### Masters files
-*.ai
-*.psd
-*.pdf
+.img/*.ai
+.img/*.psd
+.img/*.pdf
 
 # End of https://www.toptal.com/developers/gitignore/api/visualstudiocode,macos
