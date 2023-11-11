@@ -1,48 +1,141 @@
-:root{
-    --main-bg-color: white;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --white-color: white;
+  --primary-color: #ececec;
+  --primary-dark-color: #444444;
+  --secondary-color: #fbc523;
+  --primary-text-color: #2c2c2c;
+  --primary-grey: #495057;
+  --secondary-grey: #a5a8aa;
+  --poppins: "Poppins", sans-serif;
 }
 
-*{
-    box-sizing: border-box;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-.body{
-    background-color: var(--main-bg-color);
-}
-.footer{
-    width: 100%;
-    height: 70px;
-    border-top: 1px solid grey;
-    display: flex;
-    justify-content: center;
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
 }
 
-.footer__icon{
-    width: 25%;
-    height: 100%;
-    display: block; 
-    background-repeat: no-repeat;
-    background-size: 30px;
-    background-position: center;
-    margin: 0 auto;
+body {
+  font-family: var(--poppins);
+  line-height: 1.4;
+  font-weight: 400;
+  color: var(--primary-text-color);
+  font-size: 1.5rem;
+  overflow: auto;
+  height: 100vh;
 }
 
-.footer__icon--behance{ 
-    width: 25px;
-    background-image: url(/img/behance.svg);
+h2 {
+  font-size: 3rem;
+  padding-bottom: 20px;
+  width: 90%;
+  max-width: 1080px;
+  text-align: center;
 }
 
-.footer__icon--linkedin{ 
-    width: 25px;
-    background-image: url(/img/linkedin.svg);
+a {
+  text-decoration: none;
+  cursor: pointer;
 }
 
-.footer__icon--twitter{ 
-    width: 25px;
-    background-image: url(/img/twitter.svg);
+.content {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
 }
 
-.footer__icon--github{ 
-    width: 25px;
-    background-image: url(/img/github.svg);
+.top {
+  --offset: 50px;
+  box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.15);
+  position: sticky;
+  bottom: 15%;
+  left: 145%;
+  place-self: end;
+  margin-top: calc(100vh + var(--offset));
+  /* visual styling */
+  text-decoration: none;
+  padding: 10px 15px;
+  font-family: sans-serif;
+  color: #fff;
+  background: var(--primary-color);
+  border-radius: 100px;
+  white-space: nowrap;
 }
+
+.btn {
+  background-color: var(--primary-grey);
+  color: #fff;
+  font-weight: 700;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  padding: 10px 15px;
+  border: 1px solid #fff;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: transform 0.2s ease-in;
+  display: inline-block;
+  font-weight: 400;
+  min-width: 80px;
+  text-align: center;
+}
+
+.btn:hover {
+  background-color: var(--secondary-grey);
+  color: var(--primary-text-color);
+}
+
+.btn--secondary {
+  background-color: var(--primary-grey);
+}
+
+.btn--secondary:hover {
+  background-color: var(--secondary-grey);
+  color: var(--primary-text-color);
+}
+
+.bg--body {
+  background-color: var(--primary-color);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  opacity: 0.9;
+}
+
+.bg--gradient {
+  background-color: var(--primary-color);
+  background-size: 100% 100%;
+  opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+  .bg--animation {
+
+    animation: none;
+  }
+}
+
+@media (min-width: 1024px) {
+
+  .btn:hover {
+    background-color: var(--secondary-color);
+    color: #fff;
+    transform: scale(1.1);
+    box-shadow: 0 3px 5px rgba(255, 255, 255, 0.2);
+  }
+
+  .btn:active {
+    transform: translateY(3px);
+    box-shadow: none;
+  }

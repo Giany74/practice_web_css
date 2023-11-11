@@ -1,0 +1,98 @@
+.skills {
+  width: 100%;
+  position: relative;
+  padding: 30px 0px;
+}
+
+.skills__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.skills__list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1080px;
+  gap: 2rem;
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 20px;
+  border-radius: 15px
+  ;
+}
+
+.skills__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.skills__item img {
+  position: relative;
+  height: 30 px;
+  width: 30px;
+  margin: 10px 10px;
+}
+
+.progress--container {
+  width: 100%;
+  text-align: center;
+}
+
+.progress {
+  padding: 1%;
+  border-radius: 30px;
+  background: rgba(128, 128, 128, 0.129);
+  box-shadow: inset 0 1px 2px grey;
+}
+
+.progress--bar {
+  height: 10px;
+  border-radius: 30px;
+  background-image: linear-gradient(
+    to bottom,
+    grey,
+    black
+  );
+  transition: 0.4s linear;
+  transition-property: width, background-color;
+}
+
+.progress--html .progress--bar {
+  max-width: 60%;
+  background-color: var(--primary-dark-color);
+  animation: progressAnimation 4s;
+}
+.progress--css .progress--bar {
+  max-width: 50%;
+  background-color: var(--primary-dark-color);
+  animation: progressAnimation 4s;
+}
+.progress--js .progress--bar {
+  max-width: 30%;
+  background-color: var(--primary-dark-color);
+  animation: progressAnimation 4s;
+}
+
+@keyframes progressAnimation {
+  0% {
+    width: 5%;
+    background-color: var(--secondary-grey);
+  }
+  100% {
+    width: 100%;
+    background-color: var(--primary-dark-color);
+  }
+}
+
+@media (min-width: 1024px) {
+  .skills__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

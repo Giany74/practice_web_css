@@ -1,0 +1,42 @@
+.footer{
+  width: 90%;
+  max-width: 1080px;
+  margin: 0 auto;
+  height: 70px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: var(--primary-color);
+  border-radius: 15px 15px 0px 0px;
+  box-shadow: 0px -3px 6px var(--secondary-grey);
+}
+
+.footer__icon{
+  width: 25%;
+  height: 100%;
+  display: block; 
+  background-repeat: no-repeat;
+  background-size: 30px;
+  background-position: center;
+  margin: 0 auto;
+}
+
+.footer__icon--behance{ 
+  width: 25px;
+  background-image: url(/src/images/footer/behance.svg);
+}
+
+.footer__icon--linkedin{ 
+  width: 25px;
+  background-image: url(/src/images/footer/linkedin.svg);
+}
+
+.footer__icon--twitter{ 
+  width: 25px;
+  background-image: url(/src/images/footer/twitter.svg);
+}
+
+.footer__icon--github{ 
+  width: 25px;
+  background-image: url(/src/images/footer/github.svg);
+}

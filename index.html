@@ -1,20 +1,217 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"
-    <title></title>
-    <link rel="stylesheet" href="styles/common.css">
-    <link rel="stylesheet" href="styles/reset.css">
-</head>
-<body class="main-bg">
-    <h1 class="h1">Gianluca Pettenon</h1>
-    <p>Motion graphics Video editing Graphic design Brand identity Full-stack developer</p>
-    <footer class="footer">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="styles/normalize.css" />
+    <link rel="stylesheet" href="styles/common.css" />
+    <link rel="stylesheet" href="styles/header.css" />
+    <link rel="stylesheet" href="styles/banner.css" />
+    <link rel="stylesheet" href="styles/skills.css">
+    <link rel="stylesheet" href="styles/form.css">
+    <link rel="stylesheet" href="styles/footer.css">
+  </head>
+  <body>
+    <div class="bg--body"></div>
+    <div class="content">
+      <header class="header">
+        <nav class="header__nav">
+          <div class="header__nav__logo">
+            <a href="/index.html"
+              ><img src="src/images/logo.svg" alt="logo"
+            /></a>
+          </div>
+          <input id="header__nav--toggle" type="checkbox" />
+          <label
+            class="header__nav--button--container"
+            for="header__nav--toggle"
+          >
+            <div class="header__nav--button"></div>
+          </label>
+          <ul class="header__nav__list">
+            <li class="header__nav__list__item hover-underline-animation">
+              <a href="index.html">Home</a>
+            </li>
+            <li class="header__nav__list__item hover-underline-animation">
+              <a href="#skills">Skills</a>
+            </li>
+            <li class="header__nav__list__item hover-underline-animation">
+              <a href="./portfolio.html">Portfolio</a>
+            </li>
+            <li class="header__nav__list__item hover-underline-animation">
+              <a href="#contact">Contact</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <main>
+        <section class="banner bg--scale">
+          <div class="banner__image">
+          <div class="banner__info">
+            <h1 class="banner__info-h1">Hey, my name is Gianluca Pettenon</h1>
+            <p class="banner__info-p">I’m a graphic designer & full-stack web developer. I’m also passionate about funky music and play in a batucada bloco. I’m always curious to learn more when it comes to new technologies and creative coding.</p>
+          </div>
+          </div>
+
+        </section>
+        <section id="skills" class="skills">
+          <div class="skills__container">
+            <h2>presentation skills</h2>
+            <ul class="skills__list">
+              <li class="skills__item">
+                <img src="./src/images/skills/html.svg" alt="html" />
+                <div class="progress--container">
+                  <div class="progress progress--html">
+                    <div class="progress--bar"></div>
+                  </div>
+                </div>
+              </li>
+              <li class="skills__item">
+                <img src="./src/images/skills/css.svg" alt="css" />
+                <div class="progress--container">
+                  <div class="progress progress--css">
+                    <div class="progress--bar"></div>
+                  </div>
+                </div>
+              </li>
+              <li class="skills__item">
+                <img src="./src/images/skills/js.svg" alt="javascript" />
+                <div class="progress--container">
+                  <div class="progress progress--js">
+                    <div class="progress--bar"></div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <section id="contact" class="contact">
+          <h2 class="contact__h2">contact</h2>
+          <form class="form" method="post" action="submit.html">
+            <div class="form__element">
+              <label class="form__label" for="name"></label>
+              <input
+                class="form__input"
+                type="text"
+                name="name"
+                id="name"
+                placeholder="name"
+                required
+              />
+            </div>
+            <div class="form__element">
+              <label class="form__label" for="surname"></label>
+              <input
+                class="form__input"
+                type="text"
+                name="surname"
+                id="surname"
+                placeholder="surname"
+                required
+              />
+            </div>
+            <div class="form__element">
+              <label class="form__label" for="phone"
+                ></label
+              >
+              <input
+                class="form__input"
+                type="tel"
+                name="phone"
+                id="phone"
+                placeholder="phone: 123456789"
+                required
+              />
+            </div>
+            <div class="form__element known">
+              <label class="form__label">How did you know me?</label>
+              <div class="form--radio">
+                <input
+                  class="form__input"
+                  type="radio"
+                  name="where"
+                  id="university"
+                  value="university"
+                  required
+                  checked
+                />
+                <label class="form__label--radio" for="university"
+                  >university</label
+                >
+              </div>
+              <div class="form--radio">
+                <input
+                  class="form__input"
+                  type="radio"
+                  name="where"
+                  id="keepcoding"
+                  value="keepcoding"
+                  required
+                />
+                <label class="form__label--radio" for="keepcoding"
+                  >Keepcoding kick-off</label
+                >
+              </div>
+              <div class="form--radio">
+                <input
+                  class="form__input"
+                  type="radio"
+                  name="where"
+                  id="school"
+                  value="school"
+                  required
+                />
+                <label class="form__label--radio" for="school">school</label>
+              </div>
+              <div class="form--radio">
+                <input
+                  class="form__input"
+                  type="radio"
+                  name="where"
+                  id="github"
+                  value="github"
+                />
+                <label class="form__label--radio" for="github">in Github</label>
+              </div>
+            </div>
+            <div class="form__element more--info">
+              <label class="form__label" for="moreinfo"></label>
+              <textarea
+                class="form__input"
+                name="moreinfo"
+                id="moreinfo"
+                maxlength="180"
+                placeholder="more info"
+                required
+              ></textarea>
+            </div>
+            <div class="form__element form__element--checkbox">
+              <input
+                class="form__input"
+                type="checkbox"
+                name="news"
+                id="news"
+                checked
+              />
+              <label class="form__label" for="news"
+                >Subscribe to the Newsletter</label
+              >
+            </div>
+            <div>
+              <button type="submit" class="btn">send</button>
+              <button type="reset" class="btn">reset</button>
+            </div>
+          </form>
+        </section>
+      </main>
+      <footer class="footer">
         <a href="https://www.behance.net/gianlucapettenon/" class="footer__icon footer__icon--behance"></a>
         <a href="https://www.linkedin.com/in/gianluca-pettenon-a4051a8a/" class="footer__icon footer__icon--linkedin"></a>
         <a href="https://twitter.com/gianlucapetteno" class="footer__icon footer__icon--twitter" ></a>
         <a href="https://github.com/Giany74" class="footer__icon footer__icon--github"></a>
-    </footer>
-</body>
+      </footer>
+    </div>
+
+  </body>
 </html>
