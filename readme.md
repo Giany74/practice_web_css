@@ -1,4 +1,4 @@
-# Creation of a portfolio movil first with HTML5 and CSS3.
+# Portfolio movil first with HTML5 and CSS3.
 ### ToDo
 
 · Create a header with a navigation bar, which must have links to each portfolio element. All links will have to have a smoothed hover state with a transition. These links are not necessary in the mobile version.  
