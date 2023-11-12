@@ -1,0 +1,48 @@
+.portfolio{
+    width: 90%;
+    max-width: 1080px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+}
+.portfolio__h2{
+    text-align: center;
+    margin-top: 1em;
+    width: 100%;
+}
+.portfolio__container {
+  display: grid;
+  grid-template-areas: 
+    "picture01 picture02"
+    "picture03 picture04";
+  grid-gap: 20px;
+}
+.portfolio__picture--01 {
+  grid-area: picture01;
+}
+.portfolio__picture--02 {
+  grid-area: picture02;
+}
+.portfolio__picture--03 {
+  grid-area: picture03;
+}
+.portfolio__picture--04 {
+  grid-area: picture04;
+}
+.portfolio__picture {
+  margin: 0;
+}
+.portfolio__img {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.3);
+}
+@media (max-width: 768px) {
+  .portfolio__container {
+      grid-template-areas: 
+      "picture01 picture01"
+      "picture02 picture02"
+      "picture03 picture03"
+      "picture04 picture04";
+  }
+}

@@ -31,7 +31,8 @@
   background-image: url(/src/images/footer/linkedin.svg);
 }
 
-.footer__icon--twitter{ 
+.footer__icon--twitter{
+  margin-top: 10px;
   width: 25px;
   background-image: url(/src/images/footer/twitter.svg);
 }

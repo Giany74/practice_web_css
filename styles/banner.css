@@ -44,6 +44,7 @@
   right: 0;
   background-image: url("../src/images/banner/splash.jpg");
   z-index: 0;
+  overflow: hidden;
 }
 
 @media (min-width:768px){
